@@ -1,0 +1,172 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/yoav/Documents/Technion/spring 2022/gpus/hw3/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+%.o	Makefile	/^%.o: %.cu$/;"	t
+CC	Makefile	/^CC=nvcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS=-O0 -g -G -DDEBUG=1$/;"	m
+CFLAGS	Makefile	/^CFLAGS=-O3 -g -lineinfo$/;"	m
+CUDA_CHECK	ex3.h	/^#define CUDA_CHECK(/;"	d
+DEBUG	Makefile	/^DEBUG=0$/;"	m
+FILES	Makefile	/^FILES=server client$/;"	m
+GID_INDEX	ex3.h	/^#define GID_INDEX /;"	d
+GTEST_ROOT	Makefile	/^GTEST_ROOT=$(HOME)\/googletest$/;"	m
+IB_DEVICE_NAME_CLIENT	ex3.h	/^#define IB_DEVICE_NAME_CLIENT /;"	d
+IB_DEVICE_NAME_SERVER	ex3.h	/^#define IB_DEVICE_NAME_SERVER /;"	d
+IB_PORT	ex3.h	/^#define IB_PORT /;"	d
+IMG_HEIGHT	ex3.h	/^#define IMG_HEIGHT /;"	d
+IMG_SIZE	ex2.cu	/^#define IMG_SIZE /;"	d	file:
+IMG_SZ	ex3.h	/^#define IMG_SZ /;"	d
+IMG_TILES	ex2.cu	/^#define IMG_TILES /;"	d	file:
+IMG_WIDTH	ex3.h	/^#define IMG_WIDTH /;"	d
+MAP_SIZE	ex2.cu	/^#define MAP_SIZE /;"	d	file:
+MODE_QUEUE	ex3.h	/^    MODE_QUEUE,$/;"	e	enum:mode_enum
+MODE_RPC_SERVER	ex3.h	/^    MODE_RPC_SERVER,$/;"	e	enum:mode_enum
+NO_ID	ex2.cu	/^#define NO_ID /;"	d	file:
+N_IMAGES	ex3.h	/^#define N_IMAGES /;"	d
+OUTSTANDING_REQUESTS	ex3.h	/^#define OUTSTANDING_REQUESTS /;"	d
+SQR	client.cu	/^#define SQR(/;"	d	file:
+TCP_PORT_OFFSET	server.cu	/^#define TCP_PORT_OFFSET /;"	d	file:
+TCP_PORT_RANGE	server.cu	/^#define TCP_PORT_RANGE /;"	d	file:
+THREAD_NUM	ex2.cu	/^#define THREAD_NUM /;"	d	file:
+TILE_COUNT	ex3.h	/^#define TILE_COUNT /;"	d
+TILE_HALF_WIDTH	ex3.h	/^#define TILE_HALF_WIDTH /;"	d
+TILE_HEIGHT	ex2.cu	/^#define TILE_HEIGHT /;"	d	file:
+TILE_WIDTH	ex3.h	/^#define TILE_WIDTH /;"	d
+USE_ROCE	ex3.h	/^#define USE_ROCE$/;"	d
+VERBS_WC_CHECK	ex3.h	/^#define VERBS_WC_CHECK(/;"	d
+_head	ex2.cu	/^    cuda::atomic<size_t> _head, _tail;$/;"	v	typeref:typename:cuda::atomic<size_t>
+_lock	ex2.cu	/^    gpu_atomic_int *_lock; \/\/ in device memory$/;"	v	typeref:typename:gpu_atomic_int *
+_mailbox	ex2.cu	/^    T *_mailbox;$/;"	v	typeref:typename:T *
+_tail	ex2.cu	/^    cuda::atomic<size_t> _head, _tail;$/;"	v	typeref:typename:cuda::atomic<size_t>
+all	Makefile	/^all: $(FILES)$/;"	t
+buffer_out	ex2.cu	/^    ring_buffer<int>       *buffer_out; \/\/ pinned$/;"	v	typeref:typename:ring_buffer<int> *
+calc_tb	ex2.cu	/^int calc_tb() {$/;"	f	typeref:typename:int
+clean	Makefile	/^clean::$/;"	t
+client	Makefile	/^client: ex3.o client.o common.o ex3-cpu.o$/;"	t
+client.o	Makefile	/^client.o: client.cu ex3.h$/;"	t
+client_queues_context	ex3.cu	/^    client_queues_context(uint16_t tcp_port) : rdma_client_context(tcp_port)$/;"	f	typeref:typename:public:
+client_rpc_context	ex3.cu	/^    explicit client_rpc_context(uint16_t tcp_port) : rdma_client_context(tcp_port)$/;"	f	typeref:typename:public:explicit
+common.o	Makefile	/^common.o: common.cu ex3.h$/;"	t
+connect_qp	common.cu	/^void rdma_context::connect_qp(const connection_establishment_data &remote_info)$/;"	f	typeref:typename:void rdma_context::
+connection_establishment_data	ex3.h	/^struct connection_establishment_data {$/;"	s
+context	ex3.h	/^    struct ibv_context *context = nullptr;$/;"	m	class:rdma_context	typeref:struct:ibv_context *
+contexts	ex2.cu	/^    task_context contexts[STREAM_COUNT];$/;"	v	typeref:typename:task_context[]
+cpu_process	ex3-cpu.cu	/^void cpu_process(uchar *img_in, uchar *img_out, int width, int height) {$/;"	f	typeref:typename:void
+cq	ex3.h	/^    struct ibv_cq *cq = nullptr;$/;"	m	class:rdma_context	typeref:struct:ibv_cq *
+create_client	ex3.cu	/^std::unique_ptr<rdma_client_context> create_client(mode_enum mode, uint16_t tcp_port)$/;"	f	typeref:typename:std::unique_ptr<rdma_client_context>
+create_queues_server	ex2.cu	/^std::unique_ptr<image_processing_server> create_queues_server(int threads)$/;"	f	typeref:typename:std::unique_ptr<image_processing_server>
+create_server	ex3.cu	/^std::unique_ptr<rdma_server_context> create_server(mode_enum mode, uint16_t tcp_port)$/;"	f	typeref:typename:std::unique_ptr<rdma_server_context>
+create_streams_server	ex2.cu	/^std::unique_ptr<image_processing_server> create_streams_server()$/;"	f	typeref:typename:std::unique_ptr<image_processing_server>
+d_image_in	ex2.cu	/^    uchar *d_image_in;$/;"	m	struct:task_context	typeref:typename:uchar *	file:
+d_image_in	ex2.cu	/^    uchar *d_image_in;$/;"	m	struct:task_info	typeref:typename:uchar *	file:
+d_image_out	ex2.cu	/^    uchar *d_image_out;$/;"	m	struct:task_context	typeref:typename:uchar *	file:
+d_image_out	ex2.cu	/^    uchar *d_image_out;$/;"	m	struct:task_info	typeref:typename:uchar *	file:
+d_maps	ex2.cu	/^    uchar *d_maps; $/;"	m	struct:task_context	typeref:typename:uchar *	file:
+dbg_printf	ex3.h	/^#define dbg_printf(/;"	d
+dequeue	ex2.cu	/^    bool dequeue(int *img_id) override$/;"	f	typeref:typename:bool
+dequeue	ex3.cu	/^    virtual bool dequeue(int *img_id) override$/;"	f	typeref:typename:virtual bool
+destroy_lock	ex2.cu	/^__global__ void destroy_lock(gpu_atomic_int* _lock) {_lock->~gpu_atomic_int(); }$/;"	f	typeref:typename:void
+distance_sqr_between_image_arrays	client.cu	/^long long int distance_sqr_between_image_arrays(uchar *img_arr1, uchar *img_arr2) {$/;"	f	typeref:typename:long long int
+enqueue	ex2.cu	/^    bool enqueue(int img_id, uchar *img_in, uchar *img_out) override$/;"	f	typeref:typename:bool
+enqueue	ex3.cu	/^    virtual bool enqueue(int img_id, uchar *img_in, uchar *img_out) override$/;"	f	typeref:typename:virtual bool
+event_loop	ex3.cu	/^    virtual void event_loop() override$/;"	f	typeref:typename:virtual void
+ex3-cpu.o	Makefile	/^ex3-cpu.o: ex3-cpu.cu ex3.h$/;"	t
+ex3.o	Makefile	/^ex3.o: ex3.cu ex3.h ex2.cu ex2.h$/;"	t
+get_tile_id	ex2.cu	/^__device__ int get_tile_id(int index) {$/;"	f	typeref:typename:int
+get_time_msec	ex3.h	/^double static inline get_time_msec(void) {$/;"	f	typeref:typename:double
+gid	ex3.h	/^    ibv_gid gid;$/;"	m	struct:connection_establishment_data	typeref:typename:ibv_gid
+gpu_atomic_int	ex2.cu	/^typedef cuda::atomic<int, cuda::thread_scope_device> gpu_atomic_int;$/;"	t	typeref:typename:cuda::atomic<int,cuda::thread_scope_device>	file:
+gpu_pop	ex2.cu	/^    __device__ T gpu_pop() {$/;"	f	typeref:typename:T
+gpu_push	ex2.cu	/^    __device__ void gpu_push(const T& data) {$/;"	f	typeref:typename:void
+harness	Makefile	/^harness: ex3.o harness.o ex3-cpu.o common.o$/;"	t
+harness.o	Makefile	/^harness.o: harness.cu ex3.h ex2.h$/;"	t
+id	ex2.cu	/^    int id;$/;"	m	struct:task_info	typeref:typename:int	file:
+ids	ex2.cu	/^    int ids[STREAM_COUNT];$/;"	v	typeref:typename:int[]
+image_processing_server	ex2.h	/^class image_processing_server$/;"	c
+images_in	ex3.h	/^    uchar *images_in; \/* Input images for all outstanding requests *\/$/;"	m	class:rdma_server_context	typeref:typename:uchar *
+images_out	ex3.h	/^    uchar *images_out; \/* Output images for all outstanding requests *\/$/;"	m	class:rdma_server_context	typeref:typename:uchar *
+init_lock	ex2.cu	/^__global__ void init_lock(gpu_atomic_int* _lock) { new(_lock) gpu_atomic_int(0); }$/;"	f	typeref:typename:void
+initialize_verbs	common.cu	/^void rdma_context::initialize_verbs(const char *device_name)$/;"	f	typeref:typename:void rdma_context::
+input_addr	ex3.h	/^    uint64_t input_addr;$/;"	m	struct:rpc_request	typeref:typename:uint64_t
+input_length	ex3.h	/^    int input_length;$/;"	m	struct:rpc_request	typeref:typename:int
+input_rkey	ex3.h	/^    int input_rkey;$/;"	m	struct:rpc_request	typeref:typename:int
+interpolate	ex3-cpu.cu	/^uchar interpolate(uchar* maps, int tile_count, int col, int row, uchar pixel_val){$/;"	f	typeref:typename:uchar
+kill	ex3.cu	/^    void kill()$/;"	f	typeref:typename:void
+listen_fd	ex3.h	/^    int listen_fd; \/* Listening socket for TCP connection *\/$/;"	m	class:rdma_server_context	typeref:typename:int
+lock	ex2.cu	/^__device__ void lock(gpu_atomic_int *l) {$/;"	f	typeref:typename:void
+main	client.cu	/^int main(int argc, char *argv[]) {$/;"	f	typeref:typename:int
+main	server.cu	/^int main(int argc, char *argv[]) {$/;"	f	typeref:typename:int
+maps	ex2.cu	/^    uchar *maps; $/;"	v	typeref:typename:uchar *
+mode_enum	ex3.h	/^enum mode_enum {$/;"	g
+mr_images_in	ex3.cu	/^    struct ibv_mr *mr_images_in; \/* Memory region for input images *\/$/;"	v	typeref:struct:ibv_mr *
+mr_images_in	ex3.h	/^    struct ibv_mr *mr_images_in; \/* Memory region for input images *\/$/;"	m	class:rdma_server_context	typeref:struct:ibv_mr *
+mr_images_out	ex3.cu	/^    struct ibv_mr *mr_images_out; \/* Memory region for output images *\/$/;"	v	typeref:struct:ibv_mr *
+mr_images_out	ex3.h	/^    struct ibv_mr *mr_images_out; \/* Memory region for output images *\/$/;"	m	class:rdma_server_context	typeref:struct:ibv_mr *
+mr_requests	ex3.h	/^    struct ibv_mr *mr_requests = nullptr; \/* Memory region for RPC requests *\/$/;"	m	class:rdma_context	typeref:struct:ibv_mr *
+output_addr	ex3.h	/^    uint64_t output_addr;$/;"	m	struct:rpc_request	typeref:typename:uint64_t
+output_length	ex3.h	/^    int output_length;$/;"	m	struct:rpc_request	typeref:typename:int
+output_rkey	ex3.h	/^    int output_rkey;$/;"	m	struct:rpc_request	typeref:typename:int
+parse_arguments	common.cu	/^void parse_arguments(int argc, char **argv, enum mode_enum *mode, uint16_t *tcp_port)$/;"	f	typeref:typename:void
+pd	ex3.h	/^    struct ibv_pd *pd = nullptr;$/;"	m	class:rdma_context	typeref:struct:ibv_pd *
+post_rdma_read	common.cu	/^void rdma_context::post_rdma_read(void *local_dst, uint32_t len, uint32_t lkey, uint64_t remote_/;"	f	typeref:typename:void rdma_context::
+post_rdma_write	common.cu	/^void rdma_context::post_rdma_write(uint64_t remote_dst, uint32_t len, uint32_t rkey,$/;"	f	typeref:typename:void rdma_context::
+post_recv	common.cu	/^void rdma_context::post_recv(int index)$/;"	f	typeref:typename:void rdma_context::
+prefix_sum	ex2.cu	/^__device__ void prefix_sum(int arr[256], int arr_size) {$/;"	f	typeref:typename:void
+print_connection_establishment_data	common.cu	/^void rdma_context::print_connection_establishment_data(const char *type, const connection_establ/;"	f	typeref:typename:void rdma_context::
+print_latency	common.cu	/^void print_latency(const char *type, const std::vector<double>& req_t_start, const std::vector<d/;"	f	typeref:typename:void
+process_image	ex2.cu	/^__device__ void process_image(uchar *all_in, uchar *all_out, uchar *maps) {$/;"	f	typeref:typename:void
+process_image_kernel	ex2.cu	/^void process_image_kernel(uchar *in, uchar *out, uchar* maps){$/;"	f	typeref:typename:void
+process_images	client.cu	/^int process_images(mode_enum mode, std::unique_ptr<rdma_client_context>& client)$/;"	f	typeref:typename:int
+qp	ex3.h	/^    struct ibv_qp *qp = nullptr;$/;"	m	class:rdma_context	typeref:struct:ibv_qp *
+qpn	ex3.h	/^    int qpn;$/;"	m	struct:connection_establishment_data	typeref:typename:int
+queue_server	ex2.cu	/^    queue_server(int threads)$/;"	f	typeref:typename:public:
+randomize_images	client.cu	/^int randomize_images(uchar *images)$/;"	f	typeref:typename:int
+rdma_client_context	common.cu	/^rdma_client_context::rdma_client_context(uint16_t tcp_port) :$/;"	f	typeref:typename:rdma_client_context::
+rdma_client_context	ex3.h	/^class rdma_client_context : public rdma_context$/;"	c
+rdma_context	common.cu	/^rdma_context::rdma_context(uint16_t tcp_port) :$/;"	f	typeref:typename:rdma_context::
+rdma_context	ex3.h	/^class rdma_context$/;"	c
+rdma_server_context	common.cu	/^rdma_server_context::rdma_server_context(uint16_t tcp_port) :$/;"	f	typeref:typename:rdma_server_context::
+rdma_server_context	ex3.h	/^class rdma_server_context : public rdma_context$/;"	c
+recv_connection_establishment_data	common.cu	/^connection_establishment_data rdma_context::recv_connection_establishment_data()$/;"	f	typeref:typename:connection_establishment_data rdma_context::
+recv_over_socket	common.cu	/^void rdma_context::recv_over_socket(void *buffer, size_t len)$/;"	f	typeref:typename:void rdma_context::
+request_id	ex3.h	/^    int request_id; \/* Returned to the client via RDMA write immediate value; use -1 to termina/;"	m	struct:rpc_request	typeref:typename:int
+requests	ex3.h	/^    std::array<rpc_request, OUTSTANDING_REQUESTS> requests; \/* Array of outstanding requests re/;"	m	class:rdma_context	typeref:typename:std::array<rpc_request,OUTSTANDING_REQUESTS>
+ring_buffer	ex2.cu	/^    ring_buffer(size_t n) : _head(0), _tail(0) {$/;"	f
+rpc_request	ex3.h	/^struct rpc_request$/;"	s
+run_cores	ex2.cu	/^__global__ void run_cores(ring_buffer<task_info> *buffer_in, ring_buffer<int> *buffer_out, uchar/;"	f	typeref:typename:void
+send_connection_establishment_data	common.cu	/^void rdma_context::send_connection_establishment_data()$/;"	f	typeref:typename:void rdma_context::
+send_cqes_received	ex3.cu	/^    uint32_t send_cqes_received = 0;$/;"	v	typeref:typename:uint32_t
+send_over_socket	common.cu	/^void rdma_context::send_over_socket(void *buffer, size_t len)$/;"	f	typeref:typename:void rdma_context::
+server	Makefile	/^server: ex3.o server.o common.o$/;"	t
+server.o	Makefile	/^server.o: server.cu ex3.h ex2.h$/;"	t
+server_queues_context	ex3.cu	/^    explicit server_queues_context(uint16_t tcp_port) : rdma_server_context(tcp_port)$/;"	f	typeref:typename:public:explicit
+server_rpc_context	ex3.cu	/^    explicit server_rpc_context(uint16_t tcp_port) : rdma_server_context(tcp_port),$/;"	f	typeref:typename:public:explicit
+set_input_images	ex3.cu	/^    virtual void set_input_images(uchar *images_in, size_t bytes) override$/;"	f	typeref:typename:virtual void
+set_output_images	ex3.cu	/^    virtual void set_output_images(uchar *images_out, size_t bytes) override$/;"	f	typeref:typename:virtual void
+socket_fd	ex3.h	/^    int socket_fd; \/* Connected socket for TCP connection *\/$/;"	m	class:rdma_context	typeref:typename:int
+streams_server	ex2.cu	/^    streams_server()$/;"	f	typeref:typename:public:
+task_context	ex2.cu	/^struct task_context {$/;"	s	file:
+task_info	ex2.cu	/^struct task_info {$/;"	s	file:
+tcp_connection	common.cu	/^void rdma_client_context::tcp_connection()$/;"	f	typeref:typename:void rdma_client_context::
+tcp_connection	common.cu	/^void rdma_server_context::tcp_connection()$/;"	f	typeref:typename:void rdma_server_context::
+tcp_port	ex3.h	/^    uint16_t tcp_port;$/;"	m	class:rdma_context	typeref:typename:uint16_t
+uchar	ex3.h	/^typedef unsigned char uchar;$/;"	t	typeref:typename:unsigned char
+unlock	ex2.cu	/^__device__ void unlock(gpu_atomic_int *l) {$/;"	f	typeref:typename:void
+~client_queues_context	ex3.cu	/^    ~client_queues_context()$/;"	f
+~client_rpc_context	ex3.cu	/^    ~client_rpc_context()$/;"	f
+~image_processing_server	ex2.h	/^    virtual ~image_processing_server() {}$/;"	f	class:image_processing_server
+~queue_server	ex2.cu	/^    ~queue_server() override$/;"	f
+~rdma_client_context	common.cu	/^rdma_client_context::~rdma_client_context()$/;"	f	typeref:typename:rdma_client_context::
+~rdma_context	common.cu	/^rdma_context::~rdma_context()$/;"	f	typeref:typename:rdma_context::
+~rdma_server_context	common.cu	/^rdma_server_context::~rdma_server_context()$/;"	f	typeref:typename:rdma_server_context::
+~ring_buffer	ex2.cu	/^    ~ring_buffer() {$/;"	f
+~server_queues_context	ex3.cu	/^    ~server_queues_context()$/;"	f
+~streams_server	ex2.cu	/^    ~streams_server() override$/;"	f
